@@ -1,0 +1,12 @@
+Katalog z projektem:
+	C:\xampp\htdocs\[TWOJE_NAZWISKO_I_IMIE]
+
+Plik wynikowy:
+	C:\xampp\htdocs\[TWOJE_NAZWISKO_I_IMIE]\index.php
+
+Adres Twojej strony (otwórz w Chrome):
+	localhost\[TWOJE_NAZWISKO_I_IMIE]
+
+Pamiętajcie o:
+	umieszczeniu kodu PHP w znacznikach PHP:
+		'<?php' i '?>'

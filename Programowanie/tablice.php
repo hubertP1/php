@@ -82,3 +82,71 @@ echo "\nOcena Anny z matematyki: " .  $ocena;
 
 //Zadanie 7
 echo "\n\nZadanie 7 ---------------";
+
+$tablica = [1, 5, 34, 2, 7, 89, 1, 35, 10];
+echo "\nTablica: ";
+foreach ($tablica as $liczba) {
+    echo $liczba . ", ";
+}
+
+function usunNieparzyste(array $tablica): array {
+    // array_filter zachowuje tylko te elementy, dla których funkcja zwraca true
+    return array_filter($tablica, function($liczba) {
+        return $liczba % 2 === 0;
+    });
+}
+
+$tablica_parzysta = usunNieparzyste($tablica);
+echo "\nTablica z liczbami parzystymi: ";
+foreach ($tablica_parzysta as $liczba) {
+    echo $liczba . ", ";
+}
+
+//Zadanie 8
+echo "\n\nZadanie 8 ---------------";
+
+$samochody = [
+    "audi" => ["model" => "R8", "rok produkcji" => 2010, "kolor" => "czarny"],
+    "bmw" => ["model" => "M4", "rok produkcji" => 2020, "kolor" => "biały"],
+    "ford" => ["model" => "mustang", "rok produkcji" => 2015, "kolor" => "czerwony"]    
+];
+$samochod = $samochody['bmw'];
+
+echo "\nWłaściwości dla samochodu bmw:\n";
+foreach (array_keys($samochod) as $wlasciwosc) {
+    echo $wlasciwosc . " -> " . $samochod[$wlasciwosc] . "\n";
+}
+
+//Zadanie 9
+echo "\n\nZadanie 9 ---------------";
+
+$liczby = [5, 8, 2, 14, 68];
+echo "\nTablica liczby: ";
+foreach ($liczby as $liczba) {
+    echo $liczba . ", ";
+}
+
+foreach (array_keys($liczby) as $klucz) {
+    $liczby[$klucz] = $liczby[$klucz] * 1.1;
+}
+
+echo "\nTablica liczby z liczbami powiększonymi o 10%: ";
+foreach ($liczby as $liczba) {
+    echo $liczba . ", ";
+}
+
+//Zadanie 10
+echo "\n\nZadanie 10 ---------------";
+
+echo "\nTablica liczby_calkowite: ";
+$liczby_calkowite = [3, 67, 2, 4, 15, 7, 34, 1, 8, 9];
+foreach ($liczby_calkowite as $liczba) {
+    echo $liczba . ", ";
+}
+
+$suma = array_sum($liczby_calkowite);
+
+echo "\nSuma liczb w tablicy: " . $suma;
+
+//Zadanie 11
+echo "\n\nZadanie 11 ---------------";
