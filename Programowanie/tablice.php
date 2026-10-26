@@ -150,3 +150,37 @@ echo "\nSuma liczb w tablicy: " . $suma;
 
 //Zadanie 11
 echo "\n\nZadanie 11 ---------------";
+/**
+ * Generuje tabelę krzyżową dla struktury zagnieżdżonej: Student -> Oceny -> Przedmiot => Ocena
+ */
+function generujTabeleKrzyzowa(array $studenci): array
+{
+    $przedmioty = [];
+    $macierz = [];
+
+    // 1. Zbierz wszystkie unikalne przedmioty (nagłówki kolumn)
+    foreach ($studenci as $student => $dane) {
+        if (isset($dane['oceny'])) {
+            foreach ($dane['oceny'] as $przedmiot => $ocena) {
+                $przedmioty[$przedmiot] = true;
+            }
+        }
+    }
+    $naglowkiKolumn = array_keys($przedmioty);
+    sort($naglowkiKolumn); // Opcjonalne sortowanie alfabetyczne przedmiotów
+
+    // 2. Zbuduj wiersze tabeli krzyżowej
+    foreach ($studenci as $student => $dane) {
+        $wierszStudenta = [];
+        foreach ($naglowkiKolumn as $przedmiot) {
+            // Przypisz ocenę lub null/kreskę, jeśli student nie ma oceny z danego przedmiotu
+            $wierszStudenta[$przedmiot] = $dane['oceny'][$przedmiot] ?? '-';
+        }
+        $macierz[$student] = $wierszStudenta;
+    }
+
+    return [
+        'kolumny' => $naglowkiKolumn,
+        'macierz' => $macierz
+    ];
+}
