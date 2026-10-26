@@ -1,10 +1,10 @@
 <?php
 
-// #region składnia
+// #region if składnia pełna
 /* skladnia
 if (pierwszyWarunek) {
 	// instrukcja gdy pierwszyWarunek jest prawdziwy
-} else if (drugiWarunek) {
+} elseif (drugiWarunek) {
 	// instrukcja gdy drugiWarunek jest prawdziwy
 } else {
 	// instrukcja gdy żaden warunek nie jest prawdziwy
@@ -14,14 +14,14 @@ if (pierwszyWarunek) {
 $wiek = 23;
 if ($wiek > 18) {
 	echo 'jesteś dorosły';
-} else if ($wiek === 18) {
+} elseif ($wiek === 18) {
 	echo 'w tym roku stajesz się pełnoletni';
 } else { // $wiek < 18
 	echo 'jesteś nieletni';
 }
 // #endregion
 
-// #region składnia skrócona
+// #region if składnia skrócona
 // 	$warunek
 // 	? operacjaGdyPrawda
 // 	: operacjaGdyFałsz
@@ -94,4 +94,51 @@ if ($warunek1 || $warunek2) {
 // #region operator ! (negacja)
 $wartoscFalse = false;
 !$wartoscFalse -> true
+// #endregion
+
+// #region switch
+$zmienna = 'wartość X';
+switch ($zmienna) {
+	case 'wartość 1':
+		// instrukcje
+		break;	//	zatrzymaj przechodzenie do następnego case
+	case 'wartość 2':
+		// instrukcje
+		break;	//	zatrzymaj przechodzenie do następnego case
+	case 'wartość 3':
+		// instrukcje
+		break;	//	zatrzymaj przechodzenie do następnego case
+	case 'wartość 4':
+		// instrukcje
+		break;	//	zatrzymaj przechodzenie do następnego case
+	case 'wartość 5':
+		// instrukcje
+		break;	//	zatrzymaj przechodzenie do następnego case
+	default:
+		// wykonaj, gdy $zmienna nie pasuje do żadnego case
+}
+
+// odpowiednik w if
+if ($zmienna === 'wartość 1') {
+	// instrukcje
+} elseif ($zmienna === 'wartość 2') {
+	// instrukcje
+} elseif ($zmienna === 'wartość 3') {
+	// instrukcje
+} elseif ($zmienna === 'wartość 4') {
+	// instrukcje
+} elseif ($zmienna === 'wartość 5') {
+	// instrukcje
+} else {
+	// wykonaj, gdy $zmienna nie pasuje do żadnego if
+}
+// #endregion
+
+// #region switch
+// #endregion
+
+// #region switch
+// #endregion
+
+// #region switch
 // #endregion
