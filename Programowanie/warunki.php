@@ -65,7 +65,22 @@ if ($punkty > 0 && $punkty <= 49) {
 
 // Zadanie 5
 echo "\n\nZadanie 5 --------------------------";
+echo "\n";
+$zmienna1 = 1;
 
-// Zadanie 1
-echo "Zadanie 1 --------------------------";
+if (isset($zmienna1)) {
+    echo "Zmienna istnieje, ";
+    if (empty($zmienna1)) {
+        echo "jest pusta.";
+    } else {
+        echo "jej zawartość: " . $zmienna1;
+    }
+
+} else {
+    echo "Zmienna nie istnieje";
+}
+
+
+// Zadanie 6
+echo "\n\nZadanie 6 --------------------------";
 
