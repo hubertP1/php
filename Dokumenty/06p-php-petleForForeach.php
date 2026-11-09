@@ -1,14 +1,15 @@
 <?php
 
-// Pętla for - wypisanie liczb od 1 do 10
+echo '<h1>PHP: PĘTLE FOR, FOREACH</h1>' . PHP_EOL;
 
 
+echo '<h2>Pętla for - wypisanie liczb od 1 do 10</h2>' . PHP_EOL;
 // Inicjalizacja: $i = 1
 // Warunek: $i <= 10
 // Krok: $i++
 for ($i = 1; $i <= 10; $i++) {
-    // Ciało pętli wykonuje się dla każdej wartości $i
-    echo $i . '<br />' . PHP_EOL;
+	// Ciało pętli wykonuje się dla każdej wartości $i
+	echo $i . '<br />' . PHP_EOL;
 }
 
 // Wynik:
@@ -18,11 +19,11 @@ for ($i = 1; $i <= 10; $i++) {
 // 10
 
 
-// Pętla for - liczby parzyste od 2 do 10
+echo '<h2>Pętla for - liczby parzyste od 2 do 10</h2>' . PHP_EOL;
 
 // Krok $i += 2 zwiększa licznik o 2 przy każdej iteracji
 for ($i = 2; $i <= 10; $i += 2) {
-    echo $i . '<br />' . PHP_EOL;
+	echo $i . '<br />' . PHP_EOL;
 }
 
 // Wynik:
@@ -33,14 +34,14 @@ for ($i = 2; $i <= 10; $i += 2) {
 // 10
 
 
-// Pętla foreach - tablica indeksowana
+echo '<h2>Pętla foreach - tablica indeksowana</h2>' . PHP_EOL;
 
 // Tablica z elementami o indeksach 0, 1, 2
 $owoce = ["jabłko", "gruszka", "śliwka"];
 
 // Zmienna $owoc przyjmuje kolejno wartości z tablicy $owoce
 foreach ($owoce as $owoc) {
-    echo $owoc . '<br />' . PHP_EOL;
+	echo $owoc . '<br />' . PHP_EOL;
 }
 
 // Wynik:
@@ -49,14 +50,14 @@ foreach ($owoce as $owoc) {
 // śliwka
 
 
-// Pętla foreach - tablica asocjacyjna
+echo '<h2>Pętla foreach - tablica asocjacyjna</h2>' . PHP_EOL;
 
 // Tablica z kluczami tekstowymi
 $ceny = ["jabłko" => 3, "gruszka" => 5];
 
 // Klucz trafia do $nazwa, a wartość do $cena
 foreach ($ceny as $nazwa => $cena) {
-    echo "$nazwa kosztuje $cena zł" . PHP_EOL;
+	echo "$nazwa kosztuje $cena zł" . PHP_EOL;
 }
 
 // Wynik:
@@ -64,21 +65,21 @@ foreach ($ceny as $nazwa => $cena) {
 // gruszka kosztuje 5 zł
 
 
-// Instrukcje break i continue
+echo '<h2>Instrukcje break i continue</h2>' . PHP_EOL;
 
 // Pętla for z continue (pominięcie 3) i break (przerwanie przy 5)
 for ($i = 1; $i <= 5; $i++) {
-    // continue pomija resztę ciała i przechodzi do następnej wartości
-    if ($i === 3) {
-        continue;
-    }
+	// continue pomija resztę ciała i przechodzi do następnej wartości
+	if ($i === 3) {
+		continue;
+	}
 
-    // break przerywa całą pętlę
-    if ($i === 5) {
-        break;
-    }
+	// break przerywa całą pętlę
+	if ($i === 5) {
+		break;
+	}
 
-    echo $i . '<br />' . PHP_EOL;
+	echo $i . '<br />' . PHP_EOL;
 }
 
 // Wynik:
@@ -87,7 +88,7 @@ for ($i = 1; $i <= 5; $i++) {
 // 4
 
 
-// Funkcje count() i array_keys()
+echo '<h2>Funkcje count() i array_keys()</h2>' . PHP_EOL;
 
 $produkty = ["chleb" => 4.5, "mleko" => 3.2];
 $produkty2 = ['chleb', 'mleko']; // [0 => 'chleb', 1: 'mleko']
@@ -106,14 +107,14 @@ echo $klucze[1] . '<br />' . PHP_EOL;
 // mleko
 
 
-// Tabliczka mnożenia
+echo '<h2>Tabliczka mnożenia</h2>' . PHP_EOL;
 
 // Dane wejściowe: liczba $n = 7
 $n = 7;
 
 // Wypisuje tabliczkę mnożenia dla $n od 1 do 10
 for ($i = 1; $i <= 10; $i++) {
-    echo "$n x $i = " . ($n * $i) . '<br />' . PHP_EOL;
+	echo "$n x $i = " . ($n * $i) . '<br />' . PHP_EOL;
 }
 
 // Wynik:
@@ -123,7 +124,7 @@ for ($i = 1; $i <= 10; $i++) {
 // 7 x 10 = 70
 
 
-// Średnia ocen
+echo '<h2>Średnia ocen</h2>' . PHP_EOL;
 
 // Dane wejściowe: tablica ocen
 $oceny = [4, 2, 5, 3, 1, 5];
@@ -132,12 +133,12 @@ $niedostateczne = 0;
 
 // Dla każdej oceny dodaj ją do sumy
 foreach ($oceny as $ocena) {
-    $suma += $ocena;
+	$suma += $ocena;
 
-    // Licz oceny poniżej 2
-    if ($ocena < 2) {
-        $niedostateczne++;
-    }
+	// Licz oceny poniżej 2
+	if ($ocena < 2) {
+		$niedostateczne++;
+	}
 }
 
 // Średnia to suma podzielona przez liczbę ocen
@@ -151,21 +152,21 @@ echo "Liczba ocen niedostatecznych: $niedostateczne" . '<br />' . PHP_EOL;
 // Liczba ocen niedostatecznych: 1
 
 
-// Lista produktów
+echo '<h2>Lista produktów</h2>' . PHP_EOL;
 
 // Dane wejściowe: tablica asocjacyjna z cenami
 $produkty = [
-    "chleb" => 4.5,
-    "mleko" => 3.2,
-    "masło" => 7.9,
+	"chleb" => 4.5,
+	"mleko" => 3.2,
+	"masło" => 7.9,
 ];
 
 $suma = 0;
 
 // Wypisz każdy produkt i dodaj jego cenę do sumy
 foreach ($produkty as $nazwa => $cena) {
-    echo "$nazwa: $cena zł" . '<br />' . PHP_EOL;
-    $suma += $cena;
+	echo "$nazwa: $cena zł" . '<br />' . PHP_EOL;
+	$suma += $cena;
 }
 
 echo "Suma: $suma zł" . '<br />' . PHP_EOL;
@@ -176,7 +177,7 @@ $kluczeIlosc = count($klucze);
 
 // Krok 2 - wypisz co drugi produkt (indeksy 0, 2, ...)
 for ($i = 0; $i < $kluczeIlosc; $i += 2) {
-    echo "Co drugi produkt: " . $klucze[$i] . '<br />' . PHP_EOL;
+	echo "Co drugi produkt: " . $klucze[$i] . '<br />' . PHP_EOL;
 }
 
 // Wynik:
