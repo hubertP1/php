@@ -95,6 +95,69 @@ echo $uczniowie[1];
 
 Wyświetl drugą salę z tablicy sal lekcyjnych
 
+### Funkcja `array_map`
+
+#### Opis
+
+Funkcja `array_map` pozwala przetwarzać każdy element tablicy za pomocą podanej funkcji i zwraca nową tablicę z wynikami.
+
+#### Składnia
+
+```php
+array_map(function($element) {
+    // przetwarzanie elementu
+    return $nowaWartosc;
+}, $tablica);
+```
+
+#### Przykład
+```php
+$tablica = [1, 2, 3, 4];
+$tablicaPodwojona = array_map(function($element) {
+    return $element * 2;
+}, $tablica);
+print_r($tablicaPodwojona);
+/* wynik
+	Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
+*/
+```
+
+#### Zadanie
+
+Stwórz tablicę z liczbami od 1 do 5 i użyj funkcji `array_map`, aby każdą liczbę pomnożyć przez 3. Wyświetl wynik.
+
+### Funkcja `array_filter`
+
+#### Opis
+
+Funkcja `array_filter` pozwala odfiltrować elementy tablicy na podstawie podanej funkcji i zwraca nową tablicę z elementami, które spełniają warunek.
+
+#### Składnia
+
+```php
+array_filter(function($element) {
+    // zwracamy true, jeśli element ma pozostać w tablicy
+    // zwracamy false, jeśli element ma zostać odfiltrowany
+    return $warunek;
+}, $tablica);
+```
+
+#### Przykład
+```php
+$tablica = [1, 2, 3, 4];
+$tablicaParzyste = array_filter($tablica, function($element) {
+    return $element % 2 === 0;
+});
+print_r($tablicaParzyste);
+/* wynik
+	Array ( [1] => 2 [3] => 4 )
+*/
+```
+
+#### Zadanie
+
+Stwórz tablicę z liczbami od 1 do 5 i użyj funkcji `array_filter`, aby wybrać tylko liczby parzyste. Wyświetl wynik.
+
 ## Przykłady
 
 ### Tablica uczniów w klasie
@@ -166,6 +229,14 @@ Stwórz tablicę z ocenami ucznia, oblicz średnią i wyświetl wynik
 ### Zadanie 4 (poziom: ekspert)
 
 Stwórz tablicę asocjacyjną, gdzie klucz to nazwa przedmiotu, a wartość to ocena. Wyświetl wszystkie przedmioty i ich oceny.
+
+### Zadanie 5 (array_map)
+
+Stwórz tablicę z liczbami od 1 do 5 i użyj funkcji `array_map`, aby z każdej liczby stworzyć tekst: "Kwadrat liczby X to Y", gdzie X to wartość liczby, a Y to jej kwadrat.
+
+### Zadanie 6 (array_filter)
+
+Stwórz tablicę z liczbami od 1 do 10 i użyj funkcji `array_filter`, aby wybrać tylko liczby większe od 5. Wyświetl wynik.
 
 ## Podsumowanie
 
