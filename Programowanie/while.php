@@ -43,14 +43,15 @@ echo $a;
 // Zadanie 4
 echo "\n\nZadanie 4 ----------------------";
 
-$cyfra = 98765;
+//$cyfra = 98765;
+$cyfra = 27356882;
 
 $suma = 0;
 
 echo "\nSuma cyfr liczby $cyfra = ";
 while ($cyfra > 0) {
-    $suma += ($cyfra % 10);
     $roznica = ($cyfra % 10);
+    $suma += $roznica;
     $cyfra = ($cyfra - $roznica) / 10;
 }
 echo $suma;

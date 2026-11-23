@@ -1,11 +1,11 @@
 modyfikacja kodu
-	formatowanie kodu		SHIFT + ALT + F
-	komentarz				CTRL + /
-	autouzupełnianie		CTRL + SPACE
+	formatowanie kodu			SHIFT + ALT + F
+	komentarz					CTRL + /
+	autouzupełnianie			CTRL + SPACE
 
 zwijanie/rozwijanie kodu
-	zwiń blok				CTRL + SHIFT + [
-	rozwiń blok				CTRL + SHIFT + ]
+	zwiń blok				CTRL+SHIFT+[
+	rozwiń blok				CTRL+SHIFT+]
 	zaczyna sztuczny blok	'#region nazwa'
 	kończy sztuczny blok	'#endregion'
 
